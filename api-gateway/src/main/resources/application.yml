@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+app:
+  api-prefix: /api
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: auth_service
+          uri: http://localhost:8080
+          predicates:
+            - Path=${app.api-prefix}/auth/**
+          filters:
+            - StripPrefix=1

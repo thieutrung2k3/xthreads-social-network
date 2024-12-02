@@ -1,19 +1,18 @@
-package com.xthreads.user_service.dto.response;
+package com.xthreads.api_gateway.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+@Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@Setter
-@Getter
+@NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ApiResponse <T>{
+public class ApiResponse<T>{
     @Builder.Default
-    int code = 200;
+    int code = 1000;
     String message;
     T result;
 }

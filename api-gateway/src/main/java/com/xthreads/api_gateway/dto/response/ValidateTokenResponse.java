@@ -1,4 +1,4 @@
-package com.xthreads.user_service.dto.response;
+package com.xthreads.api_gateway.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
@@ -7,13 +7,9 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
-@Getter
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ApiResponse <T>{
-    @Builder.Default
-    int code = 200;
-    String message;
-    T result;
+public class ValidateTokenResponse {
+    Boolean valid;
 }
