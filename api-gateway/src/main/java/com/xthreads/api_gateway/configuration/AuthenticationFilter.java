@@ -42,7 +42,10 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     private String apiPrefix;
 
     private List<String> PUBLIC_ENDPOINTS = List.of(
-            "/auth/account/register"
+            "/auth/account/register",
+            "/user/information/get-all-users",
+            "/auth/t/login",
+            "/auth/t/validate"
     );
 
     @Override

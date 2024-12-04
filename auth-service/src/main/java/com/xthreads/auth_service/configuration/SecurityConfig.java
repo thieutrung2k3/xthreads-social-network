@@ -26,10 +26,10 @@ public class SecurityConfig {
     @Autowired
     private CustomJwtDecoder customJwtDecoder;
 
-    private static String[] PUBLIC_ENDPOINTS = {"account/register",
-        "auth",
-        "auth/validate",
-        "auth/logout"};
+    private static String[] PUBLIC_ENDPOINTS = {"/account/register",
+        "/t/login",
+            "/t/validate",
+        "/t/logout"};
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

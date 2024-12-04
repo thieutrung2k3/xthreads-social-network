@@ -19,12 +19,12 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/register")
-    public ApiResponse<UserResponse> registerUser(@RequestBody UserCreationRequest request){
+    public ApiResponse<UserResponse> registerUser(@RequestBody UserCreationRequest request) {
         return userService.registerUser(request);
     }
 
-    @GetMapping
-    public ApiResponse<List<UserResponse>> getAllUsers(){
+    @GetMapping("/get-all-users")
+    public ApiResponse<List<UserResponse>> getAllUsers() {
         return userService.getAllUsers();
     }
 

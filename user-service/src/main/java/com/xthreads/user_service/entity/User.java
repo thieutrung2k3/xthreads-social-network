@@ -23,6 +23,7 @@ public class User {
     String accountID;
     String firstName;
     String lastName;
+    String gender;
     String address;
     String email;
     String urlProfilePicture;

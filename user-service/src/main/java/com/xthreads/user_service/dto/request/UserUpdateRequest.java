@@ -14,6 +14,7 @@ import java.time.LocalDate;
 public class UserUpdateRequest {
     String firstName;
     String lastName;
+    String gender;
     String address;
     String email;
     String urlProfilePicture;

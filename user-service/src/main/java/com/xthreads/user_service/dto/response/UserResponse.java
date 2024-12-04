@@ -15,6 +15,7 @@ import java.util.Set;
 public class UserResponse {
     String firstName;
     String lastName;
+    String gender;
     String address;
     String email;
     String urlProfilePicture;

@@ -18,6 +18,7 @@ public class UserResponse {
     String userID;
     String firstName;
     String lastName;
+    String gender;
     String address;
     String email;
     String urlProfilePicture;
