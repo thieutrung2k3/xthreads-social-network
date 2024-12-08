@@ -12,10 +12,17 @@ import com.xthreads.user_service.repository.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.experimental.NonFinal;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,6 +53,13 @@ public class UserService {
                 .build();
     }
 
+    public ApiResponse<UserResponse> getUserByAccountID(String accountID){
+        User user = userRepository.findByAccountID(accountID).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+        return ApiResponse.<UserResponse>builder()
+                .result(userMapper.toUserResponse(user))
+                .build();
+    }
+
     public ApiResponse<UserResponse> updateUser(String id, UserUpdateRequest request){
         User user = userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
         userMapper.updateUser(user, request);
@@ -65,4 +79,6 @@ public class UserService {
             throw new AppException(ErrorCode.USER_NOT_EXISTED);
         }
     }
+
+
 }

@@ -1,3 +1,4 @@
+
 body{
       background-color: white;
 }
@@ -15,6 +16,11 @@ body{
 h1{
       font-size: x-large;
       text-align: center;
+}
+
+p{
+      margin-top: 10px;
+      margin-bottom: 10px;
 }
 
 label{

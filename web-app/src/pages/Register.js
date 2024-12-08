@@ -3,39 +3,66 @@ import "./css/Register.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function Register() {
   const navigate = useNavigate();
   const handleLogin = () => {
     navigate("/login");
   };
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     username: "",
     password: "",
-    urlProfilePicture: "",
+    file: null, // Dùng để lưu file
     address: "",
     dob: "",
+    gender: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    if (name === "urlProfilePicture") {
+      // Xử lý trường hợp file
+      setFormData({ ...formData, file: e.target.files[0] });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const data = new FormData();
+    data.append("file", formData.file); // File phải được thêm với key "file"
+    data.append(
+      "user",
+      JSON.stringify({
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        username: formData.username,
+        password: formData.password,
+        address: formData.address,
+        urlProfilePicture: formData.address,
+        dob: formData.dob,
+        gender: formData.gender,
+      })
+    );
+
     try {
       const response = await axios.post(
         "http://localhost:8888/api/auth/account/register",
-        formData,
+        data,
         {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "multipart/form-data",
           },
         }
       );
+
       if (response.data.code === 1000) {
         alert("Register successful.");
         setFormData({
@@ -44,7 +71,7 @@ export default function Login() {
           email: "",
           username: "",
           password: "",
-          urlProfilePicture: "",
+          file: null,
           address: "",
           dob: "",
         });
@@ -52,17 +79,10 @@ export default function Login() {
         alert("Register failed.");
       }
     } catch (error) {
-      if (error.response) {
-        // Nếu có lỗi từ phía server
-        alert(
-          `Error: ${error.response.data.message || "Something went wrong"}`
-        );
-      } else {
-        // Lỗi khi gửi yêu cầu
-        alert("Failed to register. Please try again later.");
-      }
+      alert("Failed to register. Please try again later.");
     }
   };
+
   return (
     <>
       <div className="container">
@@ -103,7 +123,7 @@ export default function Login() {
             onChange={handleChange}
             required
           />
-          <label htmlFor="address">Username*</label>
+          <label htmlFor="username">Username*</label>
           <input
             type="text"
             name="username"
@@ -126,7 +146,6 @@ export default function Login() {
           <input
             type="file"
             name="urlProfilePicture"
-            value={formData.urlProfilePicture}
             onChange={handleChange}
             required
           />
@@ -137,22 +156,22 @@ export default function Login() {
               type="radio"
               id="check-male"
               name="gender"
-              value="male"
-              checked={formData.gender === "male"}
+              value="Male"
+              checked={formData.gender === "Male"}
               onChange={handleChange}
               required
             />
-            <label for="check-male">Male</label>
+            <label htmlFor="check-male">Male</label>
             <input
               type="radio"
               id="check-female"
               name="gender"
-              value="female"
-              checked={formData.gender === "female"}
+              value="Female"
+              checked={formData.gender === "Female"}
               onChange={handleChange}
               required
             />
-            <label for="check-female">Female</label>
+            <label htmlFor="check-female">Female</label>
           </div>
 
           <label htmlFor="address">Address*</label>

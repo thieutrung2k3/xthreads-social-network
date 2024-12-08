@@ -124,7 +124,7 @@ public class AuthenticationService {
     public String generateToken(Account account){
         JWSHeader header = new JWSHeader(JWSAlgorithm.HS512);
         JWTClaimsSet jwtClaimsSet = new JWTClaimsSet.Builder()
-                .subject(account.getUsername())
+                .subject(account.getId())
                 .issuer("DevKir")
                 .issueTime(new Date())
                 .expirationTime(new Date(Instant.now().plus(VALID_DURATION, ChronoUnit.SECONDS).toEpochMilli()))

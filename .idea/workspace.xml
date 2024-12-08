@@ -4,24 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="update again api-gateway, user-service, auth-service">
+    <list default="true" id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="update FE: login, sign up, authenticated with jwt">
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/AccountCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/AccountCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/UserCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/UserCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/repository/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/repository/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/css/Register.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Routes/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/Routes/AppRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +73,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Document/project-spring/spring-boot-websocket-chat-app-main&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/Document/courses/spring-boot-devteria/microservices/social-network&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -77,11 +85,11 @@
       <recent name="D:\Document\Haui\Java-nang-cao\xthreads-social-network\user-service\src\main\java\com\xthreads\user_service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xthreads.user_service.configuration" />
       <recent name="com.xthreads.api_gateway.dto.request" />
       <recent name="com.xthreads.api_gateway.dto.response" />
       <recent name="com.xthreads.auth_service.dto.request" />
       <recent name="com.xthreads.auth_service.controller" />
-      <recent name="com.xthreads.auth_service.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -172,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733162678428</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update FE: login, sign up, authenticated with jwt">
+      <option name="closed" value="true" />
+      <created>1733343685255</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733343685255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +206,7 @@
     <MESSAGE value="create folders" />
     <MESSAGE value="update api-gateway, user-service, auth-service" />
     <MESSAGE value="update again api-gateway, user-service, auth-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="update again api-gateway, user-service, auth-service" />
+    <MESSAGE value="update FE: login, sign up, authenticated with jwt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update FE: login, sign up, authenticated with jwt" />
   </component>
 </project>
