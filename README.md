@@ -37,5 +37,5 @@ Dự án Web Social Media là một ứng dụng mạng xã hội cho phép ngư
 ### 1. Clone dự án
 
 ```bash
-git clone https://github.com/username/social-media-app.git
-cd social-media-app
+git clone https://github.com/username/social-media-app.git](https://github.com/thieutrung2k3/xthreads-social-network.git
+
