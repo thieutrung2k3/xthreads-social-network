@@ -5,31 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="update FE: login, sign up, authenticated with jwt">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/entity/FriendShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/mapper/FriendShipMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendShipRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/exception/ErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/exception/ErrorCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/css/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/css/Register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/Routes/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/Routes/AppRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -55,34 +43,43 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2pOQv1um0aGG3LNsYjf7RADHpV5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Document/courses/spring-boot-devteria/microservices/social-network&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.AuthServiceApplication.executor": "Run",
+    "Application.UserServiceApplication.executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "Maven.auth-service [clean].executor": "Run",
+    "Maven.user-service [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/HaUI_Learn/Semester 7/Java_Nang_cao/xthreads-social-network/friendship-service/src/main/java/com/xthreads/friendship_service/exception",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\HaUI_Learn\Semester 7\Java_Nang_cao\xthreads-social-network\friendship-service\src\main\java\com\xthreads\friendship_service\exception" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\api-gateway\src\main\java\com\xthreads\api_gateway" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\auth-service\src\main\java\com\xthreads\auth_service\dto\response" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\auth-service\src\main\java\com\xthreads\auth_service\dto\request" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\auth-service\src\main\java\com\xthreads\auth_service" />
-      <recent name="D:\Document\Haui\Java-nang-cao\xthreads-social-network\user-service\src\main\java\com\xthreads\user_service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xthreads.user_service.configuration" />
@@ -139,6 +136,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FriendshipServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="friendship-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.friendship_service.FriendshipServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.AuthServiceApplication" />
@@ -146,6 +150,14 @@
         <item itemvalue="Application.UserServiceApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -155,6 +167,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732634868223</updated>
+      <workItem from="1733809925711" duration="6000" />
+      <workItem from="1733809948361" duration="1619000" />
     </task>
     <task id="LOCAL-00001" summary="create folders">
       <option name="closed" value="true" />
@@ -190,6 +204,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

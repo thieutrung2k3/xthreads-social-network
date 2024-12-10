@@ -35,10 +35,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="auth-service" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.defaultComponentModel=spring -Amapstruct.verbose=true" />
-      <module name="chat-service" options="" />
-      <module name="friendship-service" options="" />
-      <module name="notification-service" options="" />
-      <module name="post-service" options="" />
+      <module name="chat-service" options="-parameters" />
+      <module name="friendship-service" options="-parameters" />
+      <module name="notification-service" options="-parameters" />
+      <module name="post-service" options="-parameters" />
       <module name="user-service" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.defaultComponentModel=spring -Amapstruct.verbose=true" />
     </option>
   </component>
