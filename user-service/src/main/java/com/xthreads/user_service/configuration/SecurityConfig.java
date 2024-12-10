@@ -17,6 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
     private static String[] PUBLIC_ENDPOINTS = {"information/register",
+            "information/get/*",
         "auth",
         "auth/validate",
         "auth/logout"};
@@ -25,7 +26,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeHttpRequests(request -> request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS).permitAll()
-                        .requestMatchers(HttpMethod.GET, "information/get-all-users").permitAll()
+                        .requestMatchers(HttpMethod.GET, PUBLIC_ENDPOINTS).permitAll()
+                        .requestMatchers("image/**").permitAll()
                 .anyRequest()
                 .authenticated());
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
