@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="update FE: login, sign up, authenticated with jwt">
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/entity/FriendShip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/AppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/ErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/mapper/FriendShipMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendShipRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/friendship-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +52,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/HaUI_Learn/Semester 7/Java_Nang_cao/xthreads-social-network/friendship-service/src/main/java/com/xthreads/friendship_service/exception",
+    "last_opened_file_path": "E:/HaUI_Learn/Semester 7/Java_Nang_cao/xthreads-social-network",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -169,6 +157,8 @@
       <updated>1732634868223</updated>
       <workItem from="1733809925711" duration="6000" />
       <workItem from="1733809948361" duration="1619000" />
+      <workItem from="1733812510859" duration="11000" />
+      <workItem from="1733812546853" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="create folders">
       <option name="closed" value="true" />
