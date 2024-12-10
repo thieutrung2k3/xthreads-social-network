@@ -4,7 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="update FE: login, sign up, authenticated with jwt" />
+    <list default="true" id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/entity/FriendShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/AppException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/mapper/FriendShipMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendShipRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/1718383112572_80897525.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/1718383364891.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/75e8c575-20ae-4bfd-9be6-4283be4a2b6c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/Raiden-Shogun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/Screenshot 2024-04-23 165910.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/ar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/as.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/asssss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/at.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/e2a97568-e223-4b0b-9a06-9f5a9f87e9b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/img/e6fce16b-1e14-435b-9757-997ac013be3e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/Routes/BodyClassManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/Popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/Popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/Utils/AuthUntil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/Utils/Background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/css/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/address-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/bell-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/chat-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/dob-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/friends-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/gender-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/home-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/icon/phone-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/pages/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web-app/src/service/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/service/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/pages/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/css/Login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Components/pages/css/Register.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/pages/css/Register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/Routes/AppRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/Routes/AppRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web-app/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +92,10 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -37,29 +107,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/HaUI_Learn/Semester 7/Java_Nang_cao/xthreads-social-network&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "Merging feature/friendship-service",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "run.configurations.included.in.services": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\HaUI_Learn\Semester 7\Java_Nang_cao\xthreads-social-network\friendship-service\src\main\java\com\xthreads\friendship_service\exception" />
@@ -80,6 +134,9 @@
     <option name="configurationTypes">
       <set>
         <option value="Application" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
@@ -123,9 +180,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.api_gateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.auth_service.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chat-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.chat_service.ChatServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FriendshipServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="friendship-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.friendship_service.FriendshipServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.notification_service.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="post-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.post_service.PostServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.user_service.UserServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,14 +236,6 @@
         <item itemvalue="Application.UserServiceApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
