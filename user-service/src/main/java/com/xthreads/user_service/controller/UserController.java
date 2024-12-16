@@ -8,6 +8,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -21,6 +22,11 @@ public class UserController {
     @PostMapping("/register")
     public ApiResponse<UserResponse> registerUser(@RequestBody UserCreationRequest request) {
         return userService.registerUser(request);
+    }
+
+    @GetMapping("/get/{accountID}")
+    public ApiResponse<UserResponse> getUserByAccountID(@PathVariable String accountID){
+        return userService.getUserByAccountID(accountID);
     }
 
     @GetMapping("/get-all-users")

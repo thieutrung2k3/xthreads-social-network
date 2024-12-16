@@ -21,6 +21,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.server.ServerWebExchange;
@@ -36,6 +37,7 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationFilter.class);
     AuthClient authClient;
     AuthService authService;
+    private final AntPathMatcher pathMatcher = new AntPathMatcher();
 
     @Value("${app.api-prefix}")
     @NonFinal
@@ -43,17 +45,21 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
 
     private List<String> PUBLIC_ENDPOINTS = List.of(
             "/auth/account/register",
-            "/user/information/get-all-users",
+            "/user/information/get/**",
+            "/user/image/**",
             "/auth/t/login",
+            "/auth/t/logout",
             "/auth/t/validate"
     );
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getURI().getPath();
-        log.info(path);
-        log.info("apiPrefix: " + apiPrefix);
-        if(PUBLIC_ENDPOINTS.stream().anyMatch(endPoint -> (apiPrefix + endPoint).equals(path))){
+        log.info("Request path: {}", path);
+        log.info("API Prefix: {}", apiPrefix);
+        if(PUBLIC_ENDPOINTS.stream().anyMatch(endpoint ->
+                pathMatcher.match(apiPrefix + endpoint, path))){
+            log.info("Public endpoint accessed: {}", path);
             return chain.filter(exchange);
         }
         List<String> authHeaders = exchange.getRequest().getHeaders().get(HttpHeaders.AUTHORIZATION);

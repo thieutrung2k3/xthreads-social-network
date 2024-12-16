@@ -12,6 +12,9 @@ body {
   height: 100vh;
   width: 100%;
 }
+body.home-page {
+  background-image: none;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
