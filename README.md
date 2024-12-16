@@ -31,7 +31,7 @@ The Web Social Media Project is a social networking application that allows user
 
 ## Installation instructions
 
-### 1. Clone dự án
+### 1. Clone project
 
 ```bash
 git clone https://github.com/username/social-media-app.git](https://github.com/thieutrung2k3/xthreads-social-network.git
