@@ -1,22 +1,22 @@
 # Social Media Web Application
 
-## Mô tả dự án
+## Description
 
-Dự án Web Social Media là một ứng dụng mạng xã hội cho phép người dùng tạo tài khoản, đăng bài, chia sẻ hình ảnh, gửi tin nhắn, kết bạn và tham gia vào các cuộc thảo luận. Ứng dụng được xây dựng với mục tiêu tạo ra một nền tảng tương tác xã hội mạnh mẽ, dễ sử dụng và an toàn cho người dùng.
+The Web Social Media Project is a social networking application that allows users to create accounts, post, share photos, send messages, make friends and participate in discussions. The application is built with the goal of creating a powerful, easy-to-use and secure social interaction platform for users.
 
-## Tính năng
+## Features
 
-- **Đăng ký và đăng nhập**: Người dùng có thể tạo tài khoản mới và đăng nhập bằng email và mật khẩu.
-- **Quản lý tài khoản**: Người dùng có thể cập nhật thông tin cá nhân, thay đổi ảnh đại diện và mật khẩu.
-- **Đăng bài**: Người dùng có thể đăng các bài viết, chia sẻ hình ảnh và cảm xúc của mình.
-- **Bảng tin**: Xem bài đăng từ bạn bè và những người theo dõi.
-- **Kết bạn**: Người dùng có thể gửi yêu cầu kết bạn và chấp nhận yêu cầu từ người khác.
-- **Nhắn tin**: Người dùng có thể gửi tin nhắn riêng tư cho bạn bè hoặc nhóm.
-- **Thông báo**: Nhận thông báo về các hoạt động quan trọng như yêu cầu kết bạn, tin nhắn mới hoặc bài viết từ bạn bè.
-- **Quản lý quyền riêng tư**: Người dùng có thể thiết lập quyền riêng tư cho bài viết và tài khoản của mình.
-- **Hệ thống tìm kiếm**: Người dùng có thể tìm kiếm bạn bè, bài viết, hoặc nhóm theo từ khóa.
+- **Register and Login**: Users can create a new account and log in with their email and password.
+- **Account Management**: Users can update their personal information, change their profile picture and password.
+- **Post**: Users can post, share their photos and emotions.
+- **News Feed**: View posts from friends and followers.
+- **Friends**: Users can send friend requests and accept requests from others.
+- **Messaging**: Users can send private messages to friends or groups.
+- **Notifications**: Receive notifications about important activities such as friend requests, new messages or posts from friends.
+- **Privacy Management**: Users can set privacy for their posts and accounts.
+- **Search System**: Users can search for friends, posts, or groups by keywords.
 
-## Công nghệ sử dụng
+## Technology used
 
 - **Frontend**:
   - ReactJS
@@ -29,10 +29,7 @@ Dự án Web Social Media là một ứng dụng mạng xã hội cho phép ngư
 - **Authentication**:
   - JWT (JSON Web Tokens)
 
-- **Tính năng bổ sung**:)
-  - API RESTful
-
-## Hướng dẫn cài đặt
+## Installation instructions
 
 ### 1. Clone dự án
 
