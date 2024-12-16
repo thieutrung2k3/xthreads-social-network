@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="update again api-gateway, user-service, auth-service">
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/dto/request/PostCommentCreationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/dto/request/PostCreationRespone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/dto/request/PostLikeCreationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/dto/request/postCreationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/entity/PostComments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/entity/PostLikes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/entity/Posts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/repository/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/AccountCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/AccountCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/UserCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/request/UserCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/dto/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/repository/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/xthreads/auth_service/repository/client/UserClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/configuration/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserCreationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserCreationRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/request/UserUpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/dto/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/xthreads/user_service/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/dto/reponse/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,23 +49,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Document/project-spring/spring-boot-websocket-chat-app-main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.AuthServiceApplication.executor": "Run",
+    "Application.UserServiceApplication.executor": "Run",
+    "Maven.api-gateway [clean].executor": "Run",
+    "Maven.auth-service [clean].executor": "Run",
+    "Maven.user-service [clean].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "test",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Workspace/BTL_Java_nangcao_XThreads/xthreads-social-network"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\api-gateway\src\main\java\com\xthreads\api_gateway" />

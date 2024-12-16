@@ -1,4 +1,4 @@
-package com.xthreads.post_service.dto.response;
+package com.xthreads.post_service.dto.reponse;
 
 public class ApiResponse <T>{
     int code;
