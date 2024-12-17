@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/AcceptFriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/RefuseFriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/SendFriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/response/AcceptFriendResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/response/RefuseFriendResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/model/FriendRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/model/Friends.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendRequestRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/validation/FriendRequestValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/friendship-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/AcceptFriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/AcceptFriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/RefuseFriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/RefuseFriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/SendFriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/SendFriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/response/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/response/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/entity/FriendShip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/mapper/FriendShipMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/mapper/FriendShipMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendShipRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +64,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "git-widget-placeholder": "feature/friendship-service",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.configurations.included.in.services": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/friendship-service&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/HaUI_Learn/Semester 7/Kiem thu phan mem/Nhom19/Nhom19_Demo/AutoTest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\HaUI_Learn\Semester 7\Java_Nang_cao\xthreads-social-network\friendship-service\src\main\java\com\xthreads\friendship_service\exception" />
@@ -175,16 +197,24 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AuthServiceApplication" />
         <item itemvalue="Application.ApiGatewayApplication" />
         <item itemvalue="Application.UserServiceApplication" />
+        <item itemvalue="Application.AuthServiceApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="" />
+      <changelist id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="" />
       <created>1732634868223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -193,6 +223,14 @@
       <workItem from="1733809948361" duration="1619000" />
       <workItem from="1733812510859" duration="11000" />
       <workItem from="1733812546853" duration="319000" />
+      <workItem from="1733837911365" duration="903000" />
+      <workItem from="1733887065007" duration="3108000" />
+      <workItem from="1733895258933" duration="1709000" />
+      <workItem from="1734241953982" duration="54000" />
+      <workItem from="1734355002637" duration="1007000" />
+      <workItem from="1734366909120" duration="38000" />
+      <workItem from="1734407542592" duration="352000" />
+      <workItem from="1734408257689" duration="6515000" />
     </task>
     <task id="LOCAL-00001" summary="create folders">
       <option name="closed" value="true" />
