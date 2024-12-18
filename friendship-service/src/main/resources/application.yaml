@@ -6,7 +6,6 @@ server:
 spring:
   # MySQL Database Configuration
   datasource:
-    driver-class-name: "com.mysql.cj.jdbc.Driver"
     url: "jdbc:mysql://localhost:3306/friendship-service"
     username: root
     password: Nguyenleviz@311

@@ -8,12 +8,11 @@ import org.springframework.http.HttpStatusCode;
 @Getter
 @AllArgsConstructor
 public enum ErrorCode {
-    USER_EXISTED(1001, "Username existed.", HttpStatus.BAD_REQUEST),
-    USER_NOT_EXISTED(1002, "Username not existed.", HttpStatus.NOT_FOUND),
-    CANNOT_GENERATE_TOKEN(1003, "Cannot generate token.", HttpStatus.BAD_REQUEST),
-    UNAUTHENTICATED(1004, "Unauthenticated", HttpStatus.UNAUTHORIZED),
-    FILE_NOT_EXISTED(1005, "File not existed.", HttpStatus.BAD_REQUEST),
-    UNCATEGORIZED_EXCEPTION(9999, "Uncategorized Exception", HttpStatus.INTERNAL_SERVER_ERROR),;
+    REQUEST_NOT_FOUND(2001, "Friend request not found", HttpStatus.NOT_FOUND),
+    INVALID_REQUEST(2002, "Invalid request data", HttpStatus.BAD_REQUEST),
+    ALREADY_ACCEPTED(2003, "Friend request already accepted", HttpStatus.BAD_REQUEST),
+    REQUEST_ALREADY_HANDLED(2004, "Friend request already handled", HttpStatus.BAD_REQUEST);
+
     private int code;
     private String message;
     private HttpStatusCode statusCode;

@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/AcceptFriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/RefuseFriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/request/SendFriendRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/dto/response/AcceptFriendResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/friendship-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/friendship-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +47,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.AuthServiceApplication.executor": "Run",
+    "Application.UserServiceApplication.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "Spring Boot.FriendshipServiceApplication.executor": "Run",
     "git-widget-placeholder": "feature/friendship-service",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/HaUI_Learn/Semester 7/Kiem thu phan mem/Nhom19/Nhom19_Demo/AutoTest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "run.configurations.included.in.services": "true"
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -84,7 +92,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AuthServiceApplication">
+  <component name="RunManager" selected="Spring Boot.FriendshipServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xthreads.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -181,10 +189,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="" />
+      <changelist id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="" />
       <created>1732634868223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -193,6 +209,17 @@
       <workItem from="1733809948361" duration="1619000" />
       <workItem from="1733812510859" duration="11000" />
       <workItem from="1733812546853" duration="319000" />
+      <workItem from="1733837911365" duration="903000" />
+      <workItem from="1733887065007" duration="3108000" />
+      <workItem from="1733895258933" duration="1709000" />
+      <workItem from="1734241953982" duration="54000" />
+      <workItem from="1734355002637" duration="1007000" />
+      <workItem from="1734366909120" duration="38000" />
+      <workItem from="1734407542592" duration="352000" />
+      <workItem from="1734408257689" duration="6515000" />
+      <workItem from="1734430384301" duration="5263000" />
+      <workItem from="1734453508302" duration="1846000" />
+      <workItem from="1734513234846" duration="1101000" />
     </task>
     <task id="LOCAL-00001" summary="create folders">
       <option name="closed" value="true" />
