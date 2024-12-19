@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/friendship-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendRequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendRequestRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,27 +47,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.AuthServiceApplication.executor": "Run",
-    "Application.UserServiceApplication.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "Spring Boot.FriendshipServiceApplication.executor": "Run",
-    "git-widget-placeholder": "feature/friendship-service",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/HaUI_Learn/Semester 7/Kiem thu phan mem/Nhom19/Nhom19_Demo/AutoTest",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;Spring Boot.FriendshipServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/friendship-service&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/HaUI_Learn/Semester 7/Kiem thu phan mem/Nhom19/Nhom19_Demo/AutoTest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\HaUI_Learn\Semester 7\Java_Nang_cao\xthreads-social-network\friendship-service\src\main\java\com\xthreads\friendship_service\exception" />
@@ -219,7 +221,9 @@
       <workItem from="1734408257689" duration="6515000" />
       <workItem from="1734430384301" duration="5263000" />
       <workItem from="1734453508302" duration="1846000" />
-      <workItem from="1734513234846" duration="1101000" />
+      <workItem from="1734513234846" duration="1365000" />
+      <workItem from="1734519824624" duration="3624000" />
+      <workItem from="1734580988623" duration="2687000" />
     </task>
     <task id="LOCAL-00001" summary="create folders">
       <option name="closed" value="true" />
