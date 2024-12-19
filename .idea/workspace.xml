@@ -31,7 +31,13 @@
       <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/repository/client/AuthClient.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/xthreads/post_service/service/PostService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/configuration/FriendShipConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/controller/FriendShipController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendRequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendRequestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/repository/FriendsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" beforeDir="false" afterPath="$PROJECT_DIR$/friendship-service/src/main/java/com/xthreads/friendship_service/service/FriendShipService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/configuration/WebClientConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/dto/request/ValidateTokenRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/xthreads/api_gateway/dto/request/ValidateTokenRequest.java" afterDir="false" />
@@ -102,10 +108,17 @@
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2pOQv1um0aGG3LNsYjf7RADHpV5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -117,6 +130,12 @@
     &quot;Application.ChatServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.PostServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Application.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;Spring Boot.FriendshipServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/friendship-service&quot;,
     &quot;Maven.api-gateway [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.auth-service [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.chat-service [clean].executor&quot;: &quot;Run&quot;,
@@ -128,7 +147,13 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Document/courses/spring-boot-devteria/microservices/social-network&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/HaUI_Learn/Semester 7/Kiem thu phan mem/Nhom19/Nhom19_Demo/AutoTest&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -139,11 +164,14 @@
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\post-service\src\main\java\com\xthreads\post_service\exception" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\chat-service\src\main\resources\static" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\chat-service\src\main\java\com\xthreads\chat_service" />
+      <recent name="E:\HaUI_Learn\Semester 7\Java_Nang_cao\xthreads-social-network\friendship-service\src\main\java\com\xthreads\friendship_service\exception" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\api-gateway\src\main\java\com\xthreads\api_gateway" />
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\auth-service\src\main\java\com\xthreads\auth_service\dto\response" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\chat-service\src\main\resources\static" />
+      <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\auth-service\src\main\java\com\xthreads\auth_service\dto\request" />
+      <recent name="D:\Document\haui\Java-nang-cao\xthreads-social-network\auth-service\src\main\java\com\xthreads\auth_service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xthreads.post_service.dto.response" />
@@ -151,16 +179,23 @@
       <recent name="com.xthreads.post_service.dto.request" />
       <recent name="com.xthreads.user_service.configuration" />
       <recent name="com.xthreads.api_gateway.dto.request" />
+      <recent name="com.xthreads.api_gateway.dto.response" />
+      <recent name="com.xthreads.auth_service.dto.request" />
+      <recent name="com.xthreads.auth_service.controller" />
     </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
         <option value="Application" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
   <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.FriendshipServiceApplication">
     <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xthreads.api_gateway.ApiGatewayApplication" />
       <module name="api-gateway" />
@@ -213,6 +248,55 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.api_gateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.auth_service.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chat-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.chat_service.ChatServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FriendshipServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="friendship-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.friendship_service.FriendshipServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.notification_service.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="post-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.post_service.PostServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xthreads.user_service.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PostServiceApplication" />
@@ -222,14 +306,39 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38544379-4438-4b48-8786-05a35fc530ab" name="Changes" comment="" />
+      <changelist id="02c7ecea-bbd1-4dfb-bc88-9372dfa5f41d" name="Changes" comment="" />
       <created>1732634868223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732634868223</updated>
+      <workItem from="1733809925711" duration="6000" />
+      <workItem from="1733809948361" duration="1619000" />
+      <workItem from="1733812510859" duration="11000" />
+      <workItem from="1733812546853" duration="319000" />
+      <workItem from="1733837911365" duration="903000" />
+      <workItem from="1733887065007" duration="3108000" />
+      <workItem from="1733895258933" duration="1709000" />
+      <workItem from="1734241953982" duration="54000" />
+      <workItem from="1734355002637" duration="1007000" />
+      <workItem from="1734366909120" duration="38000" />
+      <workItem from="1734407542592" duration="352000" />
+      <workItem from="1734408257689" duration="6515000" />
+      <workItem from="1734430384301" duration="5263000" />
+      <workItem from="1734453508302" duration="1846000" />
+      <workItem from="1734513234846" duration="1365000" />
+      <workItem from="1734519824624" duration="3624000" />
+      <workItem from="1734580988623" duration="2687000" />
     </task>
     <task id="LOCAL-00001" summary="create folders">
       <option name="closed" value="true" />
@@ -273,6 +382,9 @@
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
