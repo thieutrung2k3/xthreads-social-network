@@ -17,6 +17,8 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -26,6 +28,7 @@ public class FriendShipService {
     final FriendsRepository friendsRepository;
     final FriendRequestValidator validator;
 
+    // Add Friend Request
     public void sendFriendRequest(SendFriendRequest request) {
         validator.validateSendRequest(request);
         FriendRequest friendRequest = FriendRequest.builder()
@@ -38,6 +41,7 @@ public class FriendShipService {
         friendRequestRepository.save(friendRequest);
     }
 
+    // Accept Friend Request
     public void acceptFriendRequest(AcceptFriendRequest request){
         FriendRequest friendRequest = friendRequestRepository.findById(request.getId())
                 .orElseThrow(() -> new AppException(ErrorCode.REQUEST_NOT_FOUND));
@@ -60,6 +64,7 @@ public class FriendShipService {
         friendsRepository.save(friends);
     }
 
+    // Cancel Friend Request
     public void refuseFriendRequest(RefuseFriendRequest request) {
         FriendRequest friendRequest = friendRequestRepository.findById(request.getId())
                 .orElseThrow(() -> new AppException(ErrorCode.REQUEST_NOT_FOUND));
@@ -72,5 +77,54 @@ public class FriendShipService {
         friendRequest.setStatus(Status.REJECTED);
         friendRequest.setUpdateAt(LocalDateTime.now());
         friendRequestRepository.save(friendRequest);
+    }
+
+    // Delete Friend
+    public void unfriend(String userId1, String userId2){
+        Friends friendship = friendsRepository.findByUserId1AndUserId2(userId1, userId2)
+                .orElseThrow(() -> new AppException(ErrorCode.REQUEST_NOT_FOUND));
+
+        friendsRepository.delete(friendship);
+    }
+
+    // Friend List
+    public List<String> getFriends(String userId) {
+        return friendsRepository.findAllByUserId1OrUserId2(userId, userId)
+                .stream()
+                .map(friend -> friend.getUserId1().equals(userId) ? friend.getUserId2() : friend.getUserId1())
+                .collect(Collectors.toList());
+    }
+
+    // Pending friend request list
+    public List<FriendRequest> getPendingRequests(String receiverId) {
+        return friendRequestRepository.findAllByReceiverIdAndStatus(receiverId, Status.PENDING);
+    }
+
+
+    // Check status for friendship
+    public boolean areFriends(String userId1, String userId2){
+        return friendsRepository.findAllByUserId1AndUserId2(userId1, userId2).isPresent()
+                || friendsRepository.findAllByUserId1AndUserId2(userId2, userId1).isPresent();
+    }
+
+    // Rut lai yeu cau ket ban da tu choi
+    public void resendFriendRequest(String senderId, String receiverId){
+        FriendRequest request = friendRequestRepository
+                .findBySenderIdAndReceiverId(senderId, receiverId)
+                .orElse(null);
+
+        if(request != null && request.getStatus() != Status.REJECTED){
+            throw new AppException(ErrorCode.INVALID_REQUEST);
+        }
+
+        // create new friend request
+        FriendRequest newRequest = FriendRequest.builder()
+                .senderId(senderId)
+                .receiverId(receiverId)
+                .status(Status.PENDING)
+                .createAt(LocalDateTime.now())
+                .updateAt(LocalDateTime.now())
+                .build();
+        friendRequestRepository.save(newRequest);
     }
 }
