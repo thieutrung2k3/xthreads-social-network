@@ -1,9 +1,9 @@
 import axios from "axios";
 
-// Hàm logout không dùng hook useNavigate trực tiếp trong đây
 const logout = async () => {
   const token = localStorage.getItem("token");
-  if (!token) return; // Nếu không có token, không làm gì cả
+  console.log(token);
+  if (!token) return;
 
   try {
     // Gửi yêu cầu logout đến API
@@ -19,6 +19,7 @@ const logout = async () => {
     // Xóa token khỏi localStorage
     localStorage.removeItem("token");
   } catch (err) {
+    localStorage.removeItem("token");
     console.error("Logout failed:", err);
   }
 };

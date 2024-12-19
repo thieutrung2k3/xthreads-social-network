@@ -1,6 +1,7 @@
 package com.xthreads.user_service.controller;
 
 import com.xthreads.user_service.dto.request.UserCreationRequest;
+import com.xthreads.user_service.dto.request.UserUpdateRequest;
 import com.xthreads.user_service.dto.response.ApiResponse;
 import com.xthreads.user_service.dto.response.UserResponse;
 import com.xthreads.user_service.service.UserService;
@@ -34,4 +35,8 @@ public class UserController {
         return userService.getAllUsers();
     }
 
+    @PostMapping("/update-user")
+    public ApiResponse<UserResponse> updateUser(String id, @RequestBody UserUpdateRequest request){
+        return userService.updateUser(id, request);
+    }
 }

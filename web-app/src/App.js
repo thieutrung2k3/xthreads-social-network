@@ -1,5 +1,8 @@
 import "./App.css";
-import AppRoutes from "./Routes/AppRoutes";
+import Chat from "./pages/Chat.js";
+import ChatApp from "./pages/ChatApp";
+import Posts from "./pages/Post.js";
+import AppRoutes from "./Routes/AppRoutes.js";
 
 function App() {
   return (

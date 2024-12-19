@@ -6,7 +6,7 @@ import { useEffect } from "react";
  * Hàm kiểm tra token và điều hướng nếu không hợp lệ.
  * @param {Function} onSuccess - Hàm callback gọi khi token hợp lệ.
  */
-export const useTokenValidation = (onSuccess) => {
+export const useTokenValidation = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,15 +28,11 @@ export const useTokenValidation = (onSuccess) => {
           }
         );
 
-        if (
-          response.data.code !== 1000 ||
-          response.data.result.result === false
-        ) {
-          localStorage.removeItem("token");
-          navigate("/login");
-        } else {
-          // Token hợp lệ, gọi hàm onSuccess
-          if (onSuccess) onSuccess();
+        if (response.data.code === 1000) {
+          if (response.data.result.valid === false) {
+            localStorage.removeItem("token");
+            navigate("/login");
+          }
         }
       } catch (error) {
         alert("Token validation failed: " + error);
@@ -46,11 +42,11 @@ export const useTokenValidation = (onSuccess) => {
     };
 
     checkToken();
-  }, [navigate, onSuccess]);
+  }, [navigate]);
 };
 
-export const getUserInfoFromToken = (token) => {
-  if (!token) throw new Error("Token is required.");
+export const getAccountIDFromToken = (token) => {
+  if (!token) return null;
   try {
     const base64Url = token.split(".")[1];
     const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
@@ -69,19 +65,19 @@ export const getUserInfoFromToken = (token) => {
   }
 };
 
-export const fetchUserInfo = async () => {
+export const fetchMyUserInfo = async () => {
   const token = localStorage.getItem("token"); // Lấy token từ localStorage
-  if (!token) throw new Error("No token found");
+  if (!token) return null;
 
-  const username = getUserInfoFromToken(token); // Giải mã username từ token
-  if (!username) throw new Error("Invalid token: no username found");
+  const accountID = getAccountIDFromToken(token); // Giải mã username từ token
+  if (!accountID) throw new Error("Invalid token: no username found");
 
   try {
     const response = await axios.get(
-      `http://localhost:8888/api/user/information/get/${username}`, // Endpoint lấy thông tin
+      `http://localhost:8888/api/user/information/get/${accountID}`, // Endpoint lấy thông tin
       {
         headers: {
-          Authorization: `Bearer: ${token}`, // Gửi token trong Authorization header
+          Authorization: `Bearer ${token}`, // Gửi token trong Authorization header
           "Content-Type": "application/json",
         },
       }
@@ -95,6 +91,39 @@ export const fetchUserInfo = async () => {
     }
   } catch (error) {
     console.error("Error fetching user info:", error);
+    throw error;
+  }
+};
+
+export const fetchUserInfoByAccountID = async (accountID) => {
+  if (!accountID) {
+    throw new Error("No account ID provided");
+  }
+
+  try {
+    const response = await axios.get(
+      `http://localhost:8888/api/user/information/get/${accountID}` // Endpoint to get user information
+    );
+
+    const { data } = response;
+
+    if (response.status !== 200) {
+      throw new Error(
+        `Failed to fetch user info. Status code: ${response.status}`
+      );
+    }
+
+    if (data.code === 1000 && data.result) {
+      return data.result;
+    } else {
+      throw new Error(data.message || "Failed to fetch user information");
+    }
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.error("Axios Error:", error.message);
+    } else {
+      console.error("General Error:", error.message);
+    }
     throw error;
   }
 };

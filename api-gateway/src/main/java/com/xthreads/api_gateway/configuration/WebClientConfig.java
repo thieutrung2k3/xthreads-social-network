@@ -1,6 +1,8 @@
 package com.xthreads.api_gateway.configuration;
 
 import com.xthreads.api_gateway.reponsitory.AuthClient;
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -21,19 +23,23 @@ public class WebClientConfig {
                 .build();
     }
 
+
     //config cors
     @Bean
-    CorsWebFilter corsWebFilter(){
+    CorsWebFilter corsWebFilter() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("*"));
+        configuration.setAllowedOrigins(List.of("http://localhost:3000"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowedMethods(List.of("*"));
+      configuration.setAllowCredentials(true);
 
-        UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
-        urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", configuration);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
 
-        return new CorsWebFilter(urlBasedCorsConfigurationSource);
+        return new CorsWebFilter(source);
     }
+
+
 
     @Bean
     AuthClient authClient(WebClient webClient){

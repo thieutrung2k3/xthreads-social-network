@@ -16,9 +16,10 @@ import reactor.core.publisher.Mono;
 public class AuthService {
     AuthClient authClient;
 
-    public Mono<ApiResponse<ValidateTokenResponse>> validateToken(String token){
+    public Mono<ApiResponse<ValidateTokenResponse>> validateToken(String token) {
         return authClient.validateToken(ValidateTokenRequest.builder()
-                        .token(token)
-                        .build());
+                .token(token)
+                .build());
     }
+
 }

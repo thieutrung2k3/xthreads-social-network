@@ -9,8 +9,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Setter
 @Getter
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ValidateTokenResponse {
-    Boolean result;
+    boolean valid;
 }

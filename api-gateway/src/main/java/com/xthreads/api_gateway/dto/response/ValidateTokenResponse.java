@@ -4,12 +4,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ValidateTokenResponse {
-    Boolean valid;
+    boolean valid;
 }
