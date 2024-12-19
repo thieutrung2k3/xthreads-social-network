@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import LogoutPage from "../service/authService.js";
-import { fetchMyUserInfo } from "./Utils/AuthUntil.js";
+import { fetchMyUserInfo, getAccountIDFromToken } from "./Utils/AuthUntil.js";
+import axios from "axios";
+import FriendRequest from "./FriendRequest.js";
 
 export default function Back() {
   const [userInfo, setUserInfo] = useState(null);
@@ -11,6 +13,7 @@ export default function Back() {
 
   // States for dropdown and other toggles
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNotifyOpen, setIsNotifyOpen] = useState(false);
 
   // Load user information dynamically
   useEffect(() => {
@@ -27,6 +30,43 @@ export default function Back() {
   }, []);
 
   const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
+
+  const [requests, setRequests] = useState(null);
+  const toggleNotify = () => {
+    setIsNotifyOpen((prevState) => !prevState);
+
+    // Only make the API call if the notification is opening
+    if (!isNotifyOpen) {
+      const token = localStorage.getItem("token");
+      const accountID = getAccountIDFromToken(token);
+
+      const loadNotification = async () => {
+        try {
+          // Ensure the token is passed in the Authorization header
+          const response = await axios.get(
+            `http://localhost:8888/api/connect/friend/pending-requests`,
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+              params: {
+                receiverId: accountID, // Ensure this matches the @RequestParam
+              },
+            }
+          );
+
+          setRequests(response.data.result);
+          console.log(response.data.message);
+        } catch (error) {
+          console.error("Error fetching notifications:", error);
+        }
+      };
+
+      loadNotification();
+    } else {
+      setRequests(null);
+    }
+  };
 
   const performLogout = async () => {
     await LogoutPage(); // Logout user
@@ -50,9 +90,9 @@ export default function Back() {
     <>
       <nav>
         <div className="left">
-          <div className="logo">
+          {/* <div className="logo">
             <img src="image/logo.png" alt="Logo" />
-          </div>
+          </div> */}
           <div className="search_bar">
             <i className="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Search" />
@@ -69,7 +109,25 @@ export default function Back() {
         <div className="right">
           <i className="fa-solid fa-list-ul"></i>
           <i className="fa-brands fa-facebook-messenger"></i>
-          <i className="fa-solid fa-bell"></i>
+          <i className="fa-solid fa-bell" onClick={toggleNotify}></i>
+          {isNotifyOpen && (
+            <ul className="dropDown-f">
+              {requests ? (
+                requests.length > 0 ? (
+                  requests.map((request) => (
+                    <li key={request.id}>
+                      <FriendRequest request={request} />
+                    </li>
+                  ))
+                ) : (
+                  <p>No notifications available.</p>
+                )
+              ) : (
+                <p>Loading notifications...</p>
+              )}
+            </ul>
+          )}
+
           <i className="fa-solid fa-moon"></i>
 
           {/* User Avatar */}

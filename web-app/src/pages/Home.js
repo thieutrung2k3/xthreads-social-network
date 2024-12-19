@@ -143,14 +143,14 @@ export default function Home() {
       <Back />
       <div className="main">
         <div className="left">
-          <div className="img">
+          {/* <div className="img">
             <img src="image/profile.png" alt="Profile" />
             <p>John Deo</p>
           </div>
           <div className="img">
             <img src="image/friend.png" alt="Friends" />
             <p>Friends</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="center">
@@ -233,10 +233,10 @@ export default function Home() {
                 <i className="fa-solid fa-ellipsis"></i>
               </div>
             </div>
-            <div className="contact">
+            {/* <div className="contact">
               <img src="image/profile_7.png" alt="Contact" />
               <p>Senuda De Silva</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -1042,6 +1042,57 @@ nav .right img{
 .submit-post:hover{
     background-color: #0861f2;
 }
+.container-fr {
+    display: flex;
+    justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding: 10px;
+  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* Đẩy các nút về phía bên phải */
+    gap: 10px; /* Khoảng cách giữa hai nút */
+  }
+  .container-fr p {
+    margin: 0; /* Loại bỏ khoảng cách mặc định của thẻ <p> */
+    white-space: nowrap; /* Đảm bảo văn bản không xuống dòng */
+    margin-right: 15px;
+    margin-left: 20px;
+
+  }.accept-btn{
+    background-color: #0861f2;
+    color: white;
+    width: 80px;
+    border: none;
+  }.refuse-btn{
+    background-color: #d6d9dd;
+    color: black;
+    width: 80px;
+    border: none;
+  }.left-content {
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử trong left-content theo chiều dọc */
+  }
+
+  
+.dropDown-f{
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 500px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin-right: 90px;
+    margin-top: -5px;
+    
+  }
 
 
   

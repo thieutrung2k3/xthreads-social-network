@@ -1,7 +1,6 @@
 package com.xthreads.friendship_service.repository;
 
 import com.xthreads.friendship_service.model.Friends;
-import org.springframework.boot.autoconfigure.container.ContainerImageMetadata;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
