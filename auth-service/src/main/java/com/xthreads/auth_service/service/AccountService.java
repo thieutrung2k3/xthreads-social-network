@@ -2,6 +2,7 @@ package com.xthreads.auth_service.service;
 
 import com.xthreads.auth_service.constant.RoleConstant;
 import com.xthreads.auth_service.dto.request.AccountCreationRequest;
+import com.xthreads.auth_service.dto.request.AccountUpdateRequest;
 import com.xthreads.auth_service.dto.request.UserCreationRequest;
 import com.xthreads.auth_service.dto.response.AccountResponse;
 import com.xthreads.auth_service.dto.response.ApiResponse;
@@ -91,5 +92,14 @@ public class AccountService {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ApiResponse<AccountResponse> updateAccount(String accountID, AccountUpdateRequest request){
+        Account account = accountRepository.findById(accountID).orElseThrow(() -> new AppException(ErrorCode.USERNAME_NOT_EXISTED));
+        accountMapper.updateAccount(account, request);
+
+        return ApiResponse.<AccountResponse>builder()
+                .result(accountMapper.toAccountResponse(accountRepository.save(account)))
+                .build();
     }
 }

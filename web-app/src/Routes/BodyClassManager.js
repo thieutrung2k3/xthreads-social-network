@@ -11,12 +11,10 @@ const BodyClassManager = () => {
     document.body.className = "";
 
     // Gán class tương ứng với từng trang
-    if (currentPath === "/") {
-      document.body.classList.add("home-page");
-    } else if (currentPath === "/login") {
-      document.body.classList.add("login-page");
-    } else if (currentPath === "/signup") {
-      document.body.classList.add("signup-page");
+    if (currentPath === "/login") {
+      document.body.classList.add("login");
+    } else if (currentPath == "/register") {
+      document.body.classList.add("login");
     }
   }, [location.pathname]);
 

@@ -3,6 +3,7 @@ import Login from "../pages/Login.js";
 import Register from "../pages/Register.js";
 import Home from "../pages/Home.js";
 import BodyClassManager from "./BodyClassManager.js";
+import Profile from "../pages/Profile.js";
 const AppRoutes = () => {
   return (
     <Router>
@@ -11,6 +12,7 @@ const AppRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
+        <Route path="/profile/:accountID" element={<Profile />} />
       </Routes>
     </Router>
   );

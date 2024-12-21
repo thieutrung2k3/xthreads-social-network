@@ -3,6 +3,7 @@ package com.xthreads.auth_service.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xthreads.auth_service.dto.request.AccountCreationRequest;
+import com.xthreads.auth_service.dto.request.AccountUpdateRequest;
 import com.xthreads.auth_service.dto.request.UserCreationRequest;
 import com.xthreads.auth_service.dto.response.AccountResponse;
 import com.xthreads.auth_service.dto.response.ApiResponse;
@@ -29,5 +30,10 @@ public class AccountController {
         AccountCreationRequest request = objectMapper.readValue(data, AccountCreationRequest.class);
         log.info(data);
         return accountService.registerAccount(file, request);
+    }
+
+    @PostMapping("/update-password/{accountID}")
+    public ApiResponse<AccountResponse> updatePassword(@PathVariable String accountID, @RequestBody AccountUpdateRequest request){
+        return accountService.updateAccount(accountID, request);
     }
 }

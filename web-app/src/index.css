@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body.home-page {
+  background-image: none;
+}
+body.login{
   background-image: url('./Components/Assets/bg.jpg');
 
   background-size: cover;
@@ -12,10 +17,6 @@ body {
   height: 100vh;
   width: 100%;
 }
-body.home-page {
-  background-image: none;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

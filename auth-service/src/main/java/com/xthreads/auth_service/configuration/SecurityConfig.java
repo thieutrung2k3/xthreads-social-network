@@ -3,6 +3,8 @@ package com.xthreads.auth_service.configuration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xthreads.auth_service.dto.response.ApiResponse;
 import com.xthreads.auth_service.exception.ErrorCode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,19 +25,23 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableMethodSecurity
 public class SecurityConfig {
 
+    private static final Logger log = LoggerFactory.getLogger(SecurityConfig.class);
     @Autowired
     private CustomJwtDecoder customJwtDecoder;
 
-    private static String[] PUBLIC_ENDPOINTS = {"/account/register",
-        "/t/login",
+    private static String[] PUBLIC_ENDPOINTS = {
+            "/account/register",
+            "/t/login",
             "/t/validate",
-        "/t/logout"};
+            "/t/logout",
+            "/t/get-accId-from-token"
+    };
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .authorizeHttpRequests(request -> request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS).permitAll()
-                        .requestMatchers(HttpMethod.GET, "user").permitAll()
+                        .requestMatchers(HttpMethod.GET, PUBLIC_ENDPOINTS).permitAll()
                 .anyRequest()
                 .authenticated());
         httpSecurity.oauth2ResourceServer(oauth2 -> oauth2.jwt(jwtConfigurer -> jwtConfigurer
@@ -43,7 +49,6 @@ public class SecurityConfig {
                 .jwtAuthenticationConverter(jwtAuthenticationConverter()))
                 .authenticationEntryPoint((request, response, authException) -> {
                     ErrorCode errorCode = ErrorCode.UNAUTHENTICATED;
-
                     response.setStatus(errorCode.getStatusCode().value());
                     response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 
@@ -52,7 +57,6 @@ public class SecurityConfig {
                             .message(errorCode.getMessage())
                             .build();
                     ObjectMapper objectMapper = new ObjectMapper();
-
                     response.getWriter().write(objectMapper.writeValueAsString(apiResponse));
                     response.flushBuffer();
                 }));

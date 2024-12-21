@@ -19,50 +19,51 @@ public class FriendShipController {
     private final FriendShipService friendShipService;
 
     @PostMapping("/send-request")
-    public ResponseEntity<ApiResponse<Void>> sendFriendRequest(@RequestBody SendFriendRequest request) {
+    public ApiResponse<Void> sendFriendRequest(@RequestBody SendFriendRequest request) {
         friendShipService.sendFriendRequest(request);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Friend request sent successfully", null));
+        return new ApiResponse<>(200, "Friend request sent successfully", null);
     }
 
     @PutMapping("/accept-request")
-    public ResponseEntity<ApiResponse<Void>> acceptFriendRequest(@RequestBody AcceptFriendRequest request) {
+    public ApiResponse<Void> acceptFriendRequest(@RequestBody AcceptFriendRequest request) {
         friendShipService.acceptFriendRequest(request);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Friend request accepted", null));
+        return new ApiResponse<>(200, "Friend request accepted", null);
     }
 
     @PutMapping("/refuse-request")
-    public ResponseEntity<ApiResponse<Void>> refuseFriendRequest(@RequestBody RefuseFriendRequest request) {
+    public ApiResponse<Void> refuseFriendRequest(@RequestBody RefuseFriendRequest request) {
         friendShipService.refuseFriendRequest(request);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Friend request refused", null));
+        return new ApiResponse<>(200, "Friend request refused", null);
     }
 
     @DeleteMapping("/unfriend")
-    public ResponseEntity<ApiResponse<Void>> unfriend(@RequestParam String userId1, @RequestParam String userId2) {
+    public ApiResponse<Void> unfriend(@RequestParam String userId1, @RequestParam String userId2) {
         friendShipService.unfriend(userId1, userId2);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Unfriended successfully", null));
+        return new ApiResponse<>(200, "Unfriended successfully", null);
     }
 
     @GetMapping("/friends")
-    public ResponseEntity<ApiResponse<List<String>>> getFriends(@RequestParam String userId) {
+    public ApiResponse<List<String>> getFriends(@RequestParam String userId) {
         List<String> friends = friendShipService.getFriends(userId);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Friend list retrieved successfully", friends));
+        return new ApiResponse<>(200, "Friend list retrieved successfully", friends);  // Trả về ApiResponse với danh sách bạn bè
     }
 
     @GetMapping("/pending-requests")
-    public ResponseEntity<ApiResponse<List<FriendRequest>>> getPendingRequests(@RequestParam String receiverId) {
+    public ApiResponse<List<FriendRequest>> getPendingRequests(@RequestParam String receiverId) {
         List<FriendRequest> pendingRequests = friendShipService.getPendingRequests(receiverId);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Pending requests retrieved successfully", pendingRequests));
+        return new ApiResponse<>(200, "Pending requests retrieved successfully", pendingRequests);  // Trả về ApiResponse với danh sách yêu cầu bạn bè
     }
 
     @GetMapping("/are-friends")
-    public ResponseEntity<ApiResponse<Boolean>> areFriends(@RequestParam String userId1, @RequestParam String userId2) {
+    public ApiResponse<Boolean> areFriends(@RequestParam String userId1, @RequestParam String userId2) {
         boolean result = friendShipService.areFriends(userId1, userId2);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Friendship status retrieved successfully", result));
+        return new ApiResponse<>(200, "Friendship status retrieved successfully", result);  // Trả về ApiResponse với kết quả Boolean
     }
 
     @PostMapping("/resend-request")
-    public ResponseEntity<ApiResponse<Void>> resendFriendRequest(@RequestParam String senderId, @RequestParam String receiverId) {
+    public ApiResponse<Void> resendFriendRequest(@RequestParam String senderId, @RequestParam String receiverId) {
         friendShipService.resendFriendRequest(senderId, receiverId);
-        return ResponseEntity.ok(new ApiResponse<>(200, "Friend request resent successfully", null));
+        return new ApiResponse<>(200, "Friend request resent successfully", null);  // Trả về ApiResponse trực tiếp
     }
+
 }

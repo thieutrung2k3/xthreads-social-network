@@ -13,10 +13,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
 
@@ -36,11 +33,20 @@ public class AuthenticationController {
 
     @PostMapping("/validate")
     public ApiResponse<ValidateTokenResponse> validateToken(@RequestBody ValidateTokenRequest request) throws ParseException, JOSEException {
-        return authenticationService.validateToken(request);
+        var response = authenticationService.validateToken(request);
+        return ApiResponse.<ValidateTokenResponse>builder()
+                .result(response)
+                .build();
     }
 
     @PostMapping("/logout")
     public void logout(@RequestBody LogoutRequest request) throws ParseException, JOSEException {
         authenticationService.logout(request);
+    }
+
+    @GetMapping("/get-accId-from-token")
+    public ApiResponse<String> getAccountIdFromToken(@RequestHeader("Authorization") String token) throws ParseException {
+        String newToken = token.replace("Bearer ", "");
+        return authenticationService.getAccountIdFromToken(newToken);
     }
 }

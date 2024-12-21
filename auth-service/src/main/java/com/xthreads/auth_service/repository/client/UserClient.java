@@ -7,8 +7,11 @@ import com.xthreads.auth_service.dto.response.UserResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.Optional;
 
 @FeignClient(name = "user-service",
         url = "${app.services.user}",
@@ -18,4 +21,6 @@ public interface UserClient {
     UserResponse registerAccount(@RequestBody UserCreationRequest request);
     @GetMapping(value = "/information/get-all-users")
     UserResponse getAllUsers();
+    @GetMapping(value = "/information/get/{accountID}")
+    Optional<UserResponse> getUserByAccountID(@PathVariable String accountID);
 }

@@ -1,0 +1,6 @@
+spring:
+  websocket:
+    enabled: true
+
+server:
+  port: 5000

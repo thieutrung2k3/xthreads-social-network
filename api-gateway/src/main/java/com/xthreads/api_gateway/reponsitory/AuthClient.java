@@ -9,6 +9,6 @@ import org.springframework.web.service.annotation.PostExchange;
 import reactor.core.publisher.Mono;
 
 public interface AuthClient {
-    @PostExchange(url = "/auth/validate", contentType = MediaType.APPLICATION_JSON_VALUE)
+    @PostExchange(url = "/t/validate", contentType = MediaType.APPLICATION_JSON_VALUE)
     Mono<ApiResponse<ValidateTokenResponse>> validateToken(@RequestBody ValidateTokenRequest request);
 }

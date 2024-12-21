@@ -18,6 +18,7 @@ public class SecurityConfig {
 
     private static String[] PUBLIC_ENDPOINTS = {"information/register",
             "information/get/*",
+            "information/get-all-users",
         "auth",
         "auth/validate",
         "auth/logout"};
