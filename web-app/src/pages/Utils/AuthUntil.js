@@ -45,6 +45,30 @@ export const useTokenValidation = () => {
   }, [navigate]);
 };
 
+export const validateToken = async ({ token }) => {
+  try {
+    const response = await axios.post(
+      "http://localhost:8888/api/auth/t/validate",
+      { token },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (response.data.code === 1000) {
+      return response.data.result.valid;
+    }
+
+    return false;
+  } catch (error) {
+    // Xử lý lỗi, nếu có lỗi xảy ra trong quá trình gọi API
+    console.error("Error validating token:", error);
+    return false;
+  }
+};
+
 export const getAccountIDFromToken = (token) => {
   if (!token) return null;
   try {

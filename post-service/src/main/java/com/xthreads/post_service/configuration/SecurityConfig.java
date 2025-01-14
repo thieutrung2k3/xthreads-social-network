@@ -36,7 +36,6 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        log.info("hêrrrrrrrrrrrrrrrrrreeeeeee");
         httpSecurity
                 .authorizeHttpRequests(request -> request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS).permitAll()
                         .requestMatchers(HttpMethod.GET, PUBLIC_ENDPOINTS).permitAll()
@@ -51,7 +50,6 @@ public class SecurityConfig {
 
                     response.setStatus(errorCode.getStatusCode().value());
                     response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-                    log.info("hêrrrrrrrrrrrrrrrrrreeeeeee");
                     ApiResponse<?> apiResponse = ApiResponse.builder()
                             .code(errorCode.getCode())
                             .message(errorCode.getMessage())

@@ -21,3 +21,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.button-friends {
+  display: flex; /* Sử dụng flexbox để căn chỉnh */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  gap: 0px; /* Khoảng cách giữa hai nút */
+  margin: 0px 0; /* Khoảng cách với các phần tử khác */
+}
+
+.button-addfr,
+.button-msg {
+  width: 140px; /* Chiều rộng cố định */
+  height: 40px; /* Chiều cao cố định */
+  color: white; /* Màu chữ */
+  border: none; /* Xóa viền */
+  border-radius: 4px; /* Bo góc */
+  cursor: pointer; /* Thêm hiệu ứng trỏ tay */
+  font-size: 16px; /* Kích thước chữ */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+/* Màu nền của nút Kết bạn */
+.button-addfr {
+  background-color: #007bff; /* Màu nền xanh */
+}
+
+.button-addfr:hover {
+  background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Màu nền của nút Nhắn tin */
+.button-msg {
+  background-color: #28a745; /* Màu nền xanh lá */
+}
+
+.button-msg:hover {
+  background-color: #218838; /* Màu nền khi hover */
+}
+

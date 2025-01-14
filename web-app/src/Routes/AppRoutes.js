@@ -4,6 +4,7 @@ import Register from "../pages/Register.js";
 import Home from "../pages/Home.js";
 import BodyClassManager from "./BodyClassManager.js";
 import Profile from "../pages/Profile.js";
+import ChangePassword from "../pages/ChangePassword.js";
 const AppRoutes = () => {
   return (
     <Router>
@@ -13,6 +14,7 @@ const AppRoutes = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/profile/:accountID" element={<Profile />} />
+        <Route path="/changePassword" element={<ChangePassword />} />
       </Routes>
     </Router>
   );

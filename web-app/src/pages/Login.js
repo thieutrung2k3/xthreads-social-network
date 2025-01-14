@@ -48,7 +48,7 @@ export default function Login() {
     } catch (error) {
       if (error.response) {
         // Lỗi từ phản hồi của server
-        setError(error.response.data.message || "Login failed.");
+        setError("Incorrect password");
       } else {
         // Lỗi khác (như kết nối mạng)
         setError("Something went wrong. Please try again.");

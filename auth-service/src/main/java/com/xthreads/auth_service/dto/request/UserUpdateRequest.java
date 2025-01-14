@@ -1,4 +1,4 @@
-package com.xthreads.user_service.dto.request;
+package com.xthreads.auth_service.dto.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -17,5 +17,6 @@ public class UserUpdateRequest {
     String gender;
     String address;
     String email;
+    String urlProfilePicture;
     LocalDate dob;
 }

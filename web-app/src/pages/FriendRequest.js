@@ -7,7 +7,10 @@ import axios from "axios";
 
 const FriendRequest = ({ request }) => {
   const [userInfo, setUserInfo] = useState(null);
-
+  const [formData, setFormData] = useState({
+    senderId: request.senderId,
+    receiverId: request.receiverId,
+  });
   useEffect(() => {
     const accountID = request.senderId;
 
@@ -26,19 +29,19 @@ const FriendRequest = ({ request }) => {
   const accept = async () => {
     try {
       const token = localStorage.getItem("token");
-      const senderId = getAccountIDFromToken(token); // Lấy senderId từ request
-      // Lấy token từ localStorage
-
-      // Gửi yêu cầu API với senderId trong request body
       const response = await axios.put(
         `http://localhost:8888/api/connect/friend/accept-request`,
-        { id: senderId }, // Gửi request body
+        formData, // Gửi request body
         {
           headers: {
-            Authorization: `Bearer ${token}`, // Thêm token vào Authorization header
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
           },
         }
       );
+      setTimeout(() => {
+        window.location.reload(); // Reload trang
+      }, 1000);
 
       console.log(response.data.message); // Hiển thị thông báo thành công
     } catch (error) {

@@ -13,6 +13,7 @@ import Back from "./Back.js";
 import axios from "axios";
 import Posts from "./Post.js";
 import useInfiniteScroll from "./Utils/useInfiniteScroll.js";
+import FriendItem from "./FriendItem.js";
 
 export default function Home() {
   const [userInfo, setUserInfo] = useState(null);
@@ -130,6 +131,35 @@ export default function Home() {
   const apiUrl = "http://localhost:8888/api/user-post/post/info";
   const { posts, loading, err } = useInfiniteScroll(0, 10, apiUrl, token);
 
+  //friend
+
+  const [friends, setFriends] = useState([]);
+  const accountId = getAccountIDFromToken(token);
+  useEffect(() => {
+    const loadFriend = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:8888/api/connect/friend/friends`,
+          {
+            params: {
+              userId: accountId, // Truyền tham số vào query string
+            },
+
+            headers: {
+              Authorization: `Bearer ${token}`, // Gửi token trong Authorization header
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        setFriends(response.data.result);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
+    loadFriend();
+  }, []);
+
   if (error) {
     return <p>Error: {error}</p>;
   }
@@ -226,17 +256,22 @@ export default function Home() {
         <div className="right">
           <div className="third_warpper">
             <div className="contact_tag">
-              <h2>Contacts</h2>
+              <h2>Friends</h2>
               <div className="contact_icon">
                 <i className="fa-solid fa-video"></i>
                 <i className="fa-solid fa-magnifying-glass"></i>
                 <i className="fa-solid fa-ellipsis"></i>
               </div>
             </div>
-            {/* <div className="contact">
-              <img src="image/profile_7.png" alt="Contact" />
-              <p>Senuda De Silva</p>
-            </div> */}
+            {friends.length > 0 ? (
+              friends.map((f) => (
+                <div key={f}>
+                  <FriendItem id={f} />
+                </div>
+              ))
+            ) : (
+              <p></p>
+            )}
           </div>
         </div>
       </div>

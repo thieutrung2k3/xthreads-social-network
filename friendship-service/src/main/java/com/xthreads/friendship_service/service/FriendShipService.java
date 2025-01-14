@@ -31,6 +31,9 @@ public class FriendShipService {
     // Add Friend Request
     public void sendFriendRequest(SendFriendRequest request) {
         validator.validateSendRequest(request);
+        if(friendRequestRepository.existsBySenderIdAndReceiverId(request.getSenderId(), request.getReceiverId())){
+            throw new AppException(ErrorCode.INVALID_REQUEST);
+        }
         FriendRequest friendRequest = FriendRequest.builder()
                 .senderId(request.getSenderId())
                 .receiverId(request.getReceiverId())
@@ -42,8 +45,8 @@ public class FriendShipService {
     }
 
     // Accept Friend Request
-    public void acceptFriendRequest(AcceptFriendRequest request){
-        FriendRequest friendRequest = friendRequestRepository.findById(request.getId())
+    public void acceptFriendRequest(SendFriendRequest request){
+        FriendRequest friendRequest = friendRequestRepository.findBySenderIdAndReceiverId(request.getSenderId(), request.getReceiverId())
                 .orElseThrow(() -> new AppException(ErrorCode.REQUEST_NOT_FOUND));
 
         if (friendRequest.getStatus() != Status.PENDING) {

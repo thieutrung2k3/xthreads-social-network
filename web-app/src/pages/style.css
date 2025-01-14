@@ -220,8 +220,10 @@ nav .right img{
     width: 170px;
     height: 170px;
     margin-bottom: 20px;
+    position: relative; /* Đặt vị trí tương đối cho container */
+    display: inline-block;
 }
-.main .left-profile .img-profile img{
+.main .left-profile .img-profile .profile-img{
     width: 170px;
     height: 170px;
     object-fit: cover;
@@ -229,6 +231,39 @@ nav .right img{
     margin: 8px 15px 8px 0;
     border: 1px solid black;
 }
+.icon-container {
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    bottom: 5px; /* Căn chỉnh icon ở góc dưới */
+    right: 10px; /* Căn chỉnh icon ở góc phải */
+    width: 30px; /* Kích thước ô hình tròn */
+    height: 30px;
+    background-color: white; /* Màu nền trắng */
+    border-radius: 50%; /* Biến ô thành hình tròn */
+    display: flex; /* Để căn giữa icon */
+    justify-content: center; /* Căn giữa icon theo chiều ngang */
+    align-items: center; /* Căn giữa icon theo chiều dọc */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng */
+    cursor: pointer; /* Hiệu ứng con trỏ */
+  }
+  
+  .icon-edit {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%; /* Biểu tượng bo tròn */
+    background: white; /* Nền trắng */
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .file-input {
+    display: none; /* Ẩn input file */
+  }
+  
+  .icon-edit-label {
+    cursor: pointer;
+    display: flex; /* Để căn giữa icon nếu cần */
+  }
 .icon{
     width: 15px;
     height: 15px;
@@ -946,6 +981,11 @@ nav .right img{
 .main .right .third_warpper .contact{
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+.main .right .third_warpper .contact:hover{
+    background: #e6e8ea;
+    border-radius: 2%;
 }
 
 .main .right .third_warpper .contact img{
@@ -954,7 +994,7 @@ nav .right img{
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
-    margin: 8px 15px 8px 0;
+    margin: 8px 15px 8px 10px;
     border: 3px solid #45abff;
     cursor: pointer;
 }

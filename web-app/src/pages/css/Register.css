@@ -65,6 +65,7 @@ button{
       margin: auto;
       border-radius: 9px;
       margin-bottom: 20px;
+      margin-top: 10px;
 }
 
 .redirect{
@@ -105,3 +106,12 @@ input[type="radio"]{
 input[type="date"]{
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.friends_post p {
+      word-wrap: break-word; /* Ngắt từ khi tràn */
+      white-space: pre-wrap; /* Giữ nguyên định dạng xuống dòng trong văn bản */
+      overflow-wrap: break-word; /* Ngắt từ dài */
+      line-height: 1.5; /* Tăng khoảng cách giữa các dòng để dễ đọc */
+      margin: 8px 0; /* Căn chỉnh khoảng cách */
+    }
+    

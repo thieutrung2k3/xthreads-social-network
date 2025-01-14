@@ -1,11 +1,10 @@
 package com.xthreads.auth_service.service;
 
 import com.xthreads.auth_service.constant.RoleConstant;
-import com.xthreads.auth_service.dto.request.AccountCreationRequest;
-import com.xthreads.auth_service.dto.request.AccountUpdateRequest;
-import com.xthreads.auth_service.dto.request.UserCreationRequest;
+import com.xthreads.auth_service.dto.request.*;
 import com.xthreads.auth_service.dto.response.AccountResponse;
 import com.xthreads.auth_service.dto.response.ApiResponse;
+import com.xthreads.auth_service.dto.response.UserResponse;
 import com.xthreads.auth_service.entity.Account;
 import com.xthreads.auth_service.entity.Role;
 import com.xthreads.auth_service.exception.AppException;
@@ -19,6 +18,8 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -36,6 +37,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class AccountService {
+    private static final Logger log = LoggerFactory.getLogger(AccountService.class);
     AccountRepository accountRepository;
     AccountMapper accountMapper;
     RoleRepository roleRepository;
@@ -96,10 +98,32 @@ public class AccountService {
 
     public ApiResponse<AccountResponse> updateAccount(String accountID, AccountUpdateRequest request){
         Account account = accountRepository.findById(accountID).orElseThrow(() -> new AppException(ErrorCode.USERNAME_NOT_EXISTED));
-        accountMapper.updateAccount(account, request);
+        if(passwordEncoder.matches(request.getOldPassword(), account.getPassword())){
+            account.setPassword(passwordEncoder.encode(request.getPassword()));
+            return ApiResponse.<AccountResponse>builder()
+                    .result(accountMapper.toAccountResponse(accountRepository.save(account)))
+                    .build();
+        }
+        throw new AppException(ErrorCode.UNAUTHENTICATED);
+    }
 
-        return ApiResponse.<AccountResponse>builder()
-                .result(accountMapper.toAccountResponse(accountRepository.save(account)))
+    public UserResponse updateUserInformation(MultipartFile file, UserUpdateRequest request){
+        String fileName = saveImage(file);
+
+        request.setUrlProfilePicture(fileName);
+        UserResponse response = userClient.updateInformationUser(request)
+                .orElseThrow(() -> new AppException(ErrorCode.USERNAME_NOT_EXISTED));
+        return response;
+    }
+
+    public void updateUserAvatar(String accountID, MultipartFile file){
+        String fileName = saveImage(file);
+        log.info(fileName);
+        UserAvatarUpdateRequest request = UserAvatarUpdateRequest.builder()
+                .urlProfilePicture(fileName)
                 .build();
+
+            userClient.updateUserAvatar(accountID, request);
+
     }
 }

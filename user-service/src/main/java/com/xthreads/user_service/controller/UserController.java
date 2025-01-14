@@ -1,5 +1,6 @@
 package com.xthreads.user_service.controller;
 
+import com.xthreads.user_service.dto.request.UserAvatarUpdateRequest;
 import com.xthreads.user_service.dto.request.UserCreationRequest;
 import com.xthreads.user_service.dto.request.UserUpdateRequest;
 import com.xthreads.user_service.dto.response.ApiResponse;
@@ -35,8 +36,13 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/update-user")
-    public ApiResponse<UserResponse> updateUser(String id, @RequestBody UserUpdateRequest request){
-        return userService.updateUser(id, request);
+    @PutMapping("/update/user/{accountID}")
+    public ApiResponse<UserResponse> updateUser(@PathVariable String accountID, @RequestBody UserUpdateRequest request){
+        return userService.updateUser(accountID, request);
+    }
+
+    @PutMapping("/update/avatar/{accountID}")
+    public void updateUserAvatar(@PathVariable String accountID, @RequestBody UserAvatarUpdateRequest request){
+        userService.updateUserAvatar(accountID, request);
     }
 }

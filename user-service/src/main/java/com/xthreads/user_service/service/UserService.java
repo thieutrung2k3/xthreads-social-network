@@ -1,5 +1,6 @@
 package com.xthreads.user_service.service;
 
+import com.xthreads.user_service.dto.request.UserAvatarUpdateRequest;
 import com.xthreads.user_service.dto.request.UserCreationRequest;
 import com.xthreads.user_service.dto.request.UserUpdateRequest;
 import com.xthreads.user_service.dto.response.ApiResponse;
@@ -60,8 +61,8 @@ public class UserService {
                 .build();
     }
 
-    public ApiResponse<UserResponse> updateUser(String id, UserUpdateRequest request){
-        User user = userRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+    public ApiResponse<UserResponse> updateUser(String accountID, UserUpdateRequest request){
+        User user = userRepository.findByAccountID(accountID).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
         userMapper.updateUser(user, request);
 
         return ApiResponse.<UserResponse>builder()
@@ -80,5 +81,15 @@ public class UserService {
         }
     }
 
+    public void updateUserAvatar(String id, UserAvatarUpdateRequest request){
+        User user = userRepository.findByAccountID(id)
+                .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+        user.setUrlProfilePicture(request.getUrlProfilePicture());
+        try{
+            userRepository.save(user);
+        }catch (Exception e){
+            throw new AppException(ErrorCode.USER_NOT_EXISTED);
+        }
+    }
 
 }

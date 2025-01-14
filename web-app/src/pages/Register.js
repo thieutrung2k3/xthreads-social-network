@@ -15,7 +15,7 @@ export default function Register() {
     email: "",
     username: "",
     password: "",
-    file: null, // Dùng để lưu file
+    file: null,
     address: "",
     dob: "",
     gender: "",

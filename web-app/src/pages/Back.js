@@ -81,6 +81,10 @@ export default function Back() {
     setIsMenuOpen(false);
   };
 
+  const goToChangePassword = () => {
+    navigate(`/changePassword`);
+  };
+
   const goToHome = () => navigate("/");
 
   if (error) return <p>Error: {error}</p>;
@@ -156,8 +160,8 @@ export default function Back() {
               <li>
                 <p>Settings</p>
               </li>
-              <li>
-                <p>Reset password</p>
+              <li onClick={goToChangePassword}>
+                <p>Change password</p>
               </li>
               <li onClick={performLogout}>
                 <p>Logout</p>

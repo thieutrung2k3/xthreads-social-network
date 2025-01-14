@@ -7,6 +7,8 @@ import com.xthreads.friendship_service.dto.response.ApiResponse;
 import com.xthreads.friendship_service.model.FriendRequest;
 import com.xthreads.friendship_service.service.FriendShipService;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,16 +18,18 @@ import java.util.List;
 @RequestMapping("/friend")
 @RequiredArgsConstructor
 public class FriendShipController {
+    private static final Logger log = LoggerFactory.getLogger(FriendShipController.class);
     private final FriendShipService friendShipService;
 
     @PostMapping("/send-request")
     public ApiResponse<Void> sendFriendRequest(@RequestBody SendFriendRequest request) {
+        log.info(request.getSenderId() + request.getReceiverId());
         friendShipService.sendFriendRequest(request);
         return new ApiResponse<>(200, "Friend request sent successfully", null);
     }
 
     @PutMapping("/accept-request")
-    public ApiResponse<Void> acceptFriendRequest(@RequestBody AcceptFriendRequest request) {
+    public ApiResponse<Void> acceptFriendRequest(@RequestBody SendFriendRequest request) {
         friendShipService.acceptFriendRequest(request);
         return new ApiResponse<>(200, "Friend request accepted", null);
     }

@@ -4,25 +4,85 @@ import addressIcon from "./icon/address-icon.png";
 import dobIcon from "./icon/dob-icon.png";
 import genderIcon from "./icon/gender-icon.png";
 import phoneIcon from "./icon/phone-icon.png";
+import editAvatar from "./icon/edit.png";
 import {
   fetchMyUserInfo,
   fetchUserInfoByAccountID,
   getAccountIDFromToken,
+  useTokenValidation,
+  validateToken,
 } from "./Utils/AuthUntil";
 import Back from "./Back";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Posts from "./Post";
+import EditProfile from "./EditProfile";
+import useFriendRequest from "../service/friendService";
 
 export default function Profile() {
   const token = localStorage.getItem("token");
   const { accountID } = useParams();
+  console.log(accountID);
+  const [myAccountID, setMyAccountID] = useState(null);
 
-  const myAccountID = getAccountIDFromToken(token);
+  useEffect(() => {
+    const fetchAccountID = async () => {
+      try {
+        const id = await getAccountIDFromToken(token);
+        setMyAccountID(id);
+      } catch (error) {
+        console.error("Error fetching account ID:", error.message);
+      }
+    };
+
+    fetchAccountID();
+  }, [token]);
   const [userInfo, setUserInfo] = useState(null);
   const [error, setError] = useState(null);
   const [isMe, setIsMe] = useState(false);
-  const [posts, setPosts] = useState([]); // Đảm bảo posts là một mảng, không phải null
+  const [posts, setPosts] = useState([]);
+  const [uploadStatus, setUploadStatus] = useState("");
+
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => setShowModal(false);
+
+  const handleFileChange = async (event) => {
+    const file = event.target.files[0];
+
+    if (!file) {
+      setUploadStatus("No file selected.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      setUploadStatus("Uploading...");
+
+      const response = await axios.put(
+        `http://localhost:8888/api/auth/account/update/avatar/${myAccountID}`, // Đường dẫn API backend
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${localStorage.getItem("token")}`, // Lấy token từ localStorage
+          },
+        }
+      );
+
+      setUploadStatus("Upload successful!");
+      console.log(response.data);
+      setTimeout(() => {
+        window.location.reload(); // Reload trang
+      }, 1000);
+    } catch (error) {
+      setUploadStatus(
+        error.response?.data || "An error occurred during file upload."
+      );
+    }
+  };
 
   useEffect(() => {
     const loadUserInfo = async () => {
@@ -33,22 +93,33 @@ export default function Profile() {
           const data = await fetchMyUserInfo(token);
           setUserInfo(data);
         } else {
-          const data = await fetchUserInfoByAccountID(accountID); // Fetch thông tin người dùng khác
+          const data = await fetchUserInfoByAccountID(accountID);
           setUserInfo(data);
         }
 
-        // Tải các bài viết của người dùng
         const response = await axios.get(
           `http://localhost:8888/api/user-post/post/get/${accountID}`
         );
-        setPosts(response.data.result || []); // Đảm bảo posts là mảng
+        setPosts(response.data.result || []);
       } catch (err) {
         setError(err.message);
       }
     };
 
     loadUserInfo();
-  }, [accountID, myAccountID, token]); // Dependency on accountID, myAccountID, and token
+  }, [accountID, myAccountID, token]);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+  const [requestSent, setRequestSent] = useState(false);
+  const sendRequest = useFriendRequest();
+
+  const handleSendFr = async () => {
+    const result = await sendRequest(); // Gọi hàm gửi yêu cầu
+    setRequestSent(result); // Lưu kết quả vào state
+  };
+  //friendddddddddddddddddddddddđ
 
   if (error) {
     return <p>Error: {error}</p>;
@@ -72,10 +143,32 @@ export default function Profile() {
               }}
               className="profile-img"
             />
+            {isMe && (
+              <div className="icon-container">
+                <label htmlFor="upload-avatar" className="icon-edit-label">
+                  <img className="icon-edit" src={editAvatar} alt="Edit" />
+                </label>
+                <input
+                  id="upload-avatar"
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  className="file-input"
+                />
+              </div>
+            )}
           </div>
           <p className="name-user">
             {userInfo.lastName} {userInfo.firstName}
           </p>
+          {!isMe && (
+            <div className="button-friends">
+              <button className="button-addfr" onClick={handleSendFr}>
+                {requestSent ? "Pending" : "Add friend"}
+              </button>
+              <button className="button-msg">Message</button>
+            </div>
+          )}
 
           <div className="underline-user" />
           <div className="info-user">
@@ -106,9 +199,14 @@ export default function Profile() {
                 type="button"
                 value="Edit information"
                 className="edit-infor-btn"
-                onClick={() => alert("Edit information clicked")} // Xử lý sự kiện nếu cần
+                onClick={openModal} // Xử lý sự kiện nếu cần
               />
             )}
+            <EditProfile
+              show={showModal}
+              close={closeModal}
+              userInfo={userInfo}
+            />
           </div>
           <div className="underline-user" />
         </div>
