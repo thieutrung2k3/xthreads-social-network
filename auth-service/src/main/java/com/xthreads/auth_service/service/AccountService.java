@@ -70,6 +70,7 @@ public class AccountService {
 
         UserCreationRequest userCreationRequest = userMapper.toUserCreationRequest(request);
         userCreationRequest.setAccountID(account.getId());
+
         userClient.registerAccount(userCreationRequest);
 
         return ApiResponse.<AccountResponse>builder()
@@ -78,6 +79,7 @@ public class AccountService {
     }
 
     public String saveImage(MultipartFile file){
+        log.info(System.getProperty("user.dir") + uploadDir);
         if(file.isEmpty()){
             throw new AppException(ErrorCode.FILE_NOT_EXISTED);
         }

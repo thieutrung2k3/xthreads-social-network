@@ -2,6 +2,7 @@ package com.xthreads.api_gateway.configuration;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nimbusds.jwt.SignedJWT;
 import com.xthreads.api_gateway.dto.response.ApiResponse;
 import com.xthreads.api_gateway.service.AuthService;
 import io.netty.handler.codec.http.HttpResponseStatus;
@@ -26,6 +27,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 import reactor.netty.http.server.HttpServerResponse;
 
+import java.text.ParseException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -48,7 +50,8 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
             "/auth/t/validate",
             "/chat/**",
             "/user-post/post/get-all",
-            "/user-post/post/get/**"
+            "/user-post/post/get/**",
+            "/user-post/comment/getAllPostComment/*"
     );
 
     @Value("${app.api-prefix}")
@@ -72,9 +75,12 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
         }
         String token = authHeaders.getFirst().replace("Bearer ", "");
         log.info(token);
+
+        log.info(token);
         return authService.validateToken(token).flatMap(validateTokenResponseApiResponse -> {
             log.info(String.valueOf(validateTokenResponseApiResponse.getResult().isValid()));
             if(validateTokenResponseApiResponse.getResult().isValid()){
+
                 return chain.filter(exchange);
             }
             else{

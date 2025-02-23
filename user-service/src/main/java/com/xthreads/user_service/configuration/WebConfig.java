@@ -10,6 +10,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("image/**")
-                .addResourceLocations("file:D:/Document/haui/Java-nang-cao/xthreads-social-network/user-service/img/");
+                .addResourceLocations("file:./user-service/img/");
     }
 }

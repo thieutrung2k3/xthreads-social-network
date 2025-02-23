@@ -33,6 +33,11 @@ public class AccountController {
 
     @PutMapping("/update/password/{accountID}")
     public ApiResponse<AccountResponse> updatePassword(@PathVariable String accountID, @RequestBody AccountUpdateRequest request){
+        /**
+         * So sanh accountId trong token voi accountId trong request
+         * Neu true => thuc hien tiep
+         *     false => unauthenticated
+         */
         return accountService.updateAccount(accountID, request);
     }
 

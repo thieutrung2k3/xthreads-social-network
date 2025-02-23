@@ -32,7 +32,8 @@ public class SecurityConfig {
 //            "information/update/avatar/*",
             "auth",
             "auth/validate",
-            "auth/logout"
+            "auth/logout",
+            "/img/**"
     };
 
     @Bean

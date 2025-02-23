@@ -27,4 +27,4 @@ app:
     user: "http://localhost:8000/user"
 
 file:
-  upload-dir: "D:/Document/haui/Java-nang-cao/xthreads-social-network/user-service/img"
+  upload-dir: "/user-service/img"

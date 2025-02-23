@@ -14,7 +14,8 @@ public enum ErrorCode {
     UNAUTHENTICATED(2004, "Unauthenticated", HttpStatus.UNAUTHORIZED),
     FILE_NOT_EXISTED(2005, "File not existed.", HttpStatus.BAD_REQUEST),
     POST_NOT_EXISTED(2006, "Post not existed.", HttpStatus.BAD_REQUEST),
-    UNCATEGORIZED_EXCEPTION(9999, "Uncategorized Exception", HttpStatus.INTERNAL_SERVER_ERROR),;
+    UNCATEGORIZED_EXCEPTION(9999, "Uncategorized Exception", HttpStatus.INTERNAL_SERVER_ERROR),
+    CANNOT_ADD_REACTION(2007, "Cannot add reaction.", HttpStatus.BAD_REQUEST);
     private int code;
     private String message;
     private HttpStatusCode statusCode;

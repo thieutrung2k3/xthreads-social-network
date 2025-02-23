@@ -31,7 +31,9 @@ public class SecurityConfig {
     private static String[] PUBLIC_ENDPOINTS = {
             "/post/create",
             "/post/get-all",
-            "/post/get/*"
+            "/post/get/*",
+            "/reaction",
+            "/comment/**"
     };
 
     @Bean
